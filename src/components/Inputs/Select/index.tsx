@@ -8,6 +8,7 @@ const SelectInput = ({
   register,
   className,
 }: IStyledSelectInput) => {
+
   return (
     <div className="flex flex-col">
       <label className="text-xs text-white">{label}</label>
