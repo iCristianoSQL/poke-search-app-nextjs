@@ -24,8 +24,8 @@ export const Header = () => {
     reset();
   };
   return (
-    <header className="w-full h-16 bg-transparent flex justify-between items-center border-b border-white border-solid">
-      <Image src="/react-logo.png" width={64} height={64} alt="Logo" />
+    <header className="header-box w-full h-16 bg-transparent flex justify-between items-center border-b border-white border-solid">
+      <Image src="/react-logo.png" width={64} height={64} alt="Logo" className="img-logo" />
       <form onSubmit={handleSubmit(onSubmit)} className="flex gap-2">
         <TextInput
           placeholder="Busque por um Pokemon"
@@ -51,7 +51,7 @@ export const Header = () => {
           </svg>
         </Button>
       </form>
-      <a href="https://github.com/iCristianoSQL" target="_blank">
+      <a href="https://github.com/iCristianoSQL" target="_blank" className="img-logo">
         <Image
           src="/github-icon.png"
           width={64}

@@ -34,7 +34,7 @@ export const PokeCard = ({ pageController }: IPokeCard): JSX.Element => {
 
   return (
     <>
-      <nav className="gap-4 w-4/5 flex justify-end	mt-8">
+      <nav className="gap-4 p-2 w-full flex justify-end	mt-8">
         <Button handleClick={clearFilters} label="Limpar filtros" />
         <SelectInput
           label="A-Z"

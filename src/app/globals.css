@@ -29,6 +29,16 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-font-color); 
+  background: var(--primary-font-color);
   border-radius: 5px;
+}
+
+@media (max-width: 460px) {
+  .img-logo {
+    display: none;
+  }
+
+  .header-box {
+    justify-content: center !important;
+  }
 }
