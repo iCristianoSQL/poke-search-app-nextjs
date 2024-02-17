@@ -23,7 +23,7 @@ const SelectInput = ({
           <option
             key={option.value}
             value={option.value}
-            className="bg-primary text-primary font-medium"
+            className="bg-darkPurple text-primary font-medium"
           >
             {option.label}
           </option>
