@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
-
+import { TextProvider } from "@/contexts/SearchContext";
 
 export const metadata: Metadata = {
   title: "Pokedex",
@@ -17,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className="flex flex-col justify-between">
-        <Header />
-        {children}
-        <Footer />
+        <TextProvider>
+          <Header />
+          {children}
+          <Footer />
+        </TextProvider>
       </body>
     </html>
   );

@@ -19,3 +19,26 @@ html {
   width: 100vw;
   height: 100vh;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #260e3f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-font-color);
+  border-radius: 5px;
+}
+
+@media (max-width: 460px) {
+  .img-logo {
+    display: none;
+  }
+
+  .header-box {
+    justify-content: center !important;
+  }
+}
