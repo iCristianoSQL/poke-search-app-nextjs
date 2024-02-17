@@ -17,7 +17,6 @@ export const PokeCard = ({ pageController }: IPokeCard): JSX.Element => {
   const { pokemons } = usePokemons(pageController);
   const { text, setText } = useText();
   const azValue = watch("aZSelect");
-  const idValue = watch("iDSelect");
 
   const filteredAndSortedPokemons = pokemons
     ?.filter((pokemon) =>
@@ -28,9 +27,6 @@ export const PokeCard = ({ pageController }: IPokeCard): JSX.Element => {
         ? a.name.localeCompare(b.name)
         : b.name.localeCompare(a.name);
     })
-    .sort((a, b) => {
-      return Number(idValue) === 1 ? a.id - b.id : b.id - a.id;
-    });
 
   const clearFilters = () => {
     setText("");
@@ -46,14 +42,6 @@ export const PokeCard = ({ pageController }: IPokeCard): JSX.Element => {
           options={[
             { value: 1, label: "A-Z" },
             { value: 2, label: "Z-A" },
-          ]}
-        />
-        <SelectInput
-          label="ID"
-          register={register("iDSelect")}
-          options={[
-            { value: 1, label: "Menor" },
-            { value: 2, label: "Maior" },
           ]}
         />
       </nav>
